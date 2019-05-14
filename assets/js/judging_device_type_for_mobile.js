@@ -13,5 +13,5 @@ function isMobile() {
 if (!isMobile()) {
     window.location.href = "https://mcu-towin.tk/";
 } else {
-    window.location.href = "https://mcu-towin.tk/";
+
 }
