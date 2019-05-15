@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
                        <head>
                            <meta charset="utf-8">
-                           <title>TOWIN OFFICAL</title>
+                           <title>ToWIN</title>
                            <meta name="description" content="">
                            <meta name="viewport" content="width=device-width, initial-scale=1">
                            <link rel="icon" type="image/png" href="favicon.ico">
@@ -53,10 +53,44 @@
         <div class="culmn">
             <!--Home page style-->
 
+            <script language="javascript">
+                function doSearch(text) {
+                    var isfound = 0;
+                    if (window.find && window.getSelection) {
+                        document.designMode = "on";
+                        var sel = window.getSelection();
+                        //        sel.collapse(document.body, 0);
+                        sel.collapseToEnd();
+                        isfound = 0;
 
+                        while (window.find(text)) {
+                            document.getElementById("button").blur();
+                            document.execCommand("HiliteColor", false, "green");
+                            sel.collapseToEnd();
+                            isfound = 1;
+                        }
+                        if (isfound == 0) {
+                            alert('cant find');
+                        }
+                        document.designMode = "off";
+                    } else if (document.body.createTextRange) {
+                        var textRange = document.body.createTextRange();
+                        isfound = 0;
+                        while (textRange.findText(texta)) {
+                            textRange.execCommand("BackColor", false, "green");
+                            textRange.collapse(false);
+                            alert('cant scroll down less than IE8');
+                            isfound = 1;
+                        }
+                        if (isfound == 0)
+                            alert('cant find');
+                    }
+                }
+            </script>
+         
             <nav class="navbar navbar-default bootsnav navbar-fixed no-background white">
                 <!-- Start Top Search -->
-                <div class="top-search">
+                <!--<div class="top-search">
                     <div class="container">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-search"></i></span>
@@ -64,16 +98,16 @@
                             <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <!-- End Top Search -->
 
 
                 <div class="container">
-                    <div class="attr-nav">
+                    <!--<div class="attr-nav">
                         <ul>
                             <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         </ul>
-                    </div>
+                    </div>-->
 
                     <!-- Start Header Navigation -->
                     <div class="navbar-header">
@@ -113,18 +147,26 @@
                                 <div class="hello_slid">
                                     <div class="slid_item xs-text-center">
                                         <div class="col-sm-4">
-                                            <img src="assets/images/hello-phone.png" alt="" />
+                                            <img src="assets/images/first_app_page.png" alt="" />
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="home_text xs-m-top-30">
-                                                <h2 class="text-white">Welcome To <strong>TOWIN Offical</strong></h2>
-                                                <h1 class="text-white">Real-Estate Towin App</h1>
-                                                <h3 class="text-white"> Use Me And I'll Let You <strong>To Win</strong></h3>
+                                                <h2 class="text-white">Welcome To <strong>ToWIN</strong></h2>
+                                                <h1 class="text-white">Real-Estate ToWIN App</h1>
+                                                <h3 class="text-white"> Make you become a <strong>little detective</strong></h3>
                                             </div>
 
+                                            
+
                                             <div class="home_btns m-top-40">
-                                                <a href="https://play.google.com/store/search?q=TOWIN&c=apps&hl=zh-TW" class="btn btn-primary m-top-20">Download</a>
-                                                <a href="http://web.fintech.mcu.edu.tw/zh-hant" class="btn btn-default m-top-20">About Our School</a>
+                                                <script language="javascript">
+                                                    function download_page_have_not_enable() {
+                                                        alert("Sorry that download page have not enable.");
+                                                    }
+                                                </script>
+
+                                                <a onclick="download_page_have_not_enable()" class="btn btn-primary m-top-20">Download</a>
+                                                <a href="http://web.fintech.mcu.edu.tw/zh-hant" target="_blank" class="btn btn-default m-top-20">About Our School</a>
                                             </div>
                                         </div>
                                     </div><!-- End off slid item -->
@@ -149,9 +191,9 @@
                                         <i class="icon icon-medical"></i>
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>Best Quality Design</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                            in sit amet mattis volutpat rhoncus.</p>
+                                        <h3>Financial Inclusion</h3>
+                                        <p>Increase convenience, regardless of region,
+                                             regardless of class, universal benefit to all.</p>
                                     </div>
                                 </div>
                             </div>
@@ -161,9 +203,9 @@
                                         <i class="icon icon-clock2"></i>
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>Responsive Design</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                            in sit amet mattis volutpat rhoncus.</p>
+                                        <h3>Real Estate</h3>
+                                        <p>Real estate information is open and transparent,
+                                            and information asymmetry is resolved.</p>
                                     </div>
                                 </div>
                             </div>
@@ -173,9 +215,9 @@
                                         <i class="icon icon-adjustments"></i>
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>Easy to Customize</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                            in sit amet mattis volutpat rhoncus.</p>
+                                        <h3>Augmented Reality</h3>
+                                        <p>The vast amount of real estate
+                                            data combined with Augmented Reality applications.</p>
                                     </div>
                                 </div>
                             </div>
@@ -185,9 +227,9 @@
                                         <i class="icon icon-tablet2"></i>
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>Best Quality Design</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                            in sit amet mattis volutpat rhoncus.</p>
+                                        <h3>Big Data</h3>
+                                        <p>The idea comes from Pokémon Go,
+                                            combined with real estate information and lending solutions.</p>
                                     </div>
                                 </div>
                             </div>
@@ -245,7 +287,8 @@
                             <div class="col-md-7">
                                 <div class="business_item">
                                     <div class="business_img">
-                                        <img src="assets/images/business-img.png" alt="" />
+                                        <!--<img src="assets/images/business-img.png" alt="" />-->
+                                        <iframe width="735" height="547" src="https://www.youtube.com/embed/ma7r2HGqwXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -261,8 +304,8 @@
                 <div class="container">
                     <div class="main_team roomy-80">
                         <div class="head_title text-center fix">
-                            <h2 class="text-uppercase">Our Team</h2>
-                            <h5>We have a talent with amazing skill</h5>
+                            <h2 class="text-uppercase">Our Feature</h2>
+                            <h5>We have a talent with amazing idea</h5>
                         </div>
 
                         <div id="team-slid" class="carousel slide carousel-fade" data-ride="carousel">
@@ -281,33 +324,33 @@
                                             <div class="col-sm-4">
                                                 <div class="team_item team_skill">
                                                     <div class="team_author">
-                                                        <h4>John Doe</h4>
-                                                        <p>CEO & FOunder</p>
+                                                        <h4>TO WIN</h4>
+                                                        <p>Real-Estate Towin App</p>
                                                     </div>
 
                                                     <div class="team_skill_title fix m-top-40 m-bottom-40">
-                                                        <h5>Best Skill</h5>
+                                                        <h5>Best Function</h5>
                                                     </div>
 
                                                     <div class="skill_bar sm-m-top-50 m-top-20">
-                                                        <div class="teamskillbar clearfix m-top-20" data-percent="80%">
-                                                            <h6 class="text-uppercase">Photoshop</h6>
-                                                            <div class="teamskillbar-bar"></div>
+                                                        <div class="teamskillbar clearfix m-top-20" data-percent="0%">
+                                                            <h6 class="text-uppercase">Financial Inclusion</h6>
+                                                            <!--<div class="teamskillbar-bar"></div>-->
                                                         </div> <!-- End Skill Bar -->
 
-                                                        <div class="teamskillbar clearfix m-top-50" data-percent="75%">
-                                                            <h6 class="text-uppercase">WEB DESIGN</h6>
-                                                            <div class="teamskillbar-bar"></div>
+                                                        <div class="teamskillbar clearfix m-top-50" data-percent="0%">
+                                                            <h6 class="text-uppercase">Real Estate</h6>
+                                                            <!--<div class="teamskillbar-bar"></div>-->
                                                         </div> <!-- End Skill Bar -->
 
-                                                        <div class="teamskillbar clearfix m-top-50" data-percent="90%">
-                                                            <h6 class="text-uppercase">LOGO Design</h6>
-                                                            <div class="teamskillbar-bar"></div>
+                                                        <div class="teamskillbar clearfix m-top-50" data-percent="0%">
+                                                            <h6 class="text-uppercase">Augmented Reality</h6>
+                                                            <!--<div class="teamskillbar-bar"></div>-->
                                                         </div> <!-- End Skill Bar -->
 
-                                                        <div class="teamskillbar clearfix m-top-50" data-percent="75%">
-                                                            <h6 class="text-uppercase">Wordpress</h6>
-                                                            <div class="teamskillbar-bar"></div>
+                                                        <div class="teamskillbar clearfix m-top-50" data-percent="0%">
+                                                            <h6 class="text-uppercase">Big Data</h6>
+                                                            <!--<div class="teamskillbar-bar"></div>-->
                                                         </div> <!-- End Skill Bar -->
                                                     </div><!-- End off skill bar -->
 
@@ -589,13 +632,10 @@
                                 </a>
 
                             </div>
-
                         </div>
                     </div><!-- End off row -->
                 </div><!-- End off container -->
             </section><!-- End off test section -->
-
-
 
             <!--Call to  action section-->
             <section id="action" class="action bg-blue roomy-40">
@@ -607,6 +647,7 @@
                                     <h2 class="text-white text-uppercase">Your Promotion Text Will Be Here</h2>
                                 </div>
                             </div>
+
                             <div class="col-md-4">
                                 <div class="action_btn text-left sm-text-center">
                                     <a href="" class="btn btn-default">Purchase Now</a>
@@ -628,31 +669,33 @@
                             <div class="col-md-3">
                                 <div class="widget_item widget_about">
                                     <h5 class="text-white">About Us</h5>
-                                    <p class="m-top-20">Lorem ipsum dolor sit amet consec tetur adipiscing elit
-                                        nulla aliquet pretium nisi in cursus
-                                        maecenas nec eleifen.</p>
+                                    <p class="m-top-20">
+                                        Our team come from Academy Financial Technology Applications,
+                                        School of Financial Technology, Ming Chung Universy.
+                                        Our school has a group of students they are optimistic 
+                                        about the prospects for financial technology.
+                                    </p>
                                     <div class="widget_ab_item m-top-30">
                                         <div class="item_icon"><i class="fa fa-location-arrow"></i></div>
                                         <div class="widget_ab_item_text">
                                             <h6 class="text-white">Location</h6>
                                             <p>
-                                                123 suscipit ipsum nam auctor
-                                                mauris dui, ac sollicitudin mauris,
-                                                Bandung</p>
+                                                5 De Ming Rd., Gui Shan District, Taoyuan City 333, Taiwan(R.O.C.)
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="widget_ab_item m-top-30">
                                         <div class="item_icon"><i class="fa fa-phone"></i></div>
                                         <div class="widget_ab_item_text">
                                             <h6 class="text-white">Phone :</h6>
-                                            <p>+1 2345 6789</p>
+                                            <p>+886 3 350-7001</p>
                                         </div>
                                     </div>
                                     <div class="widget_ab_item m-top-30">
                                         <div class="item_icon"><i class="fa fa-envelope-o"></i></div>
                                         <div class="widget_ab_item_text">
                                             <h6 class="text-white">Email Address :</h6>
-                                            <p>youremail@mail.com</p>
+                                            <p>shihan@mail.mcu.edu.tw</p>
                                         </div>
                                     </div>
                                 </div><!-- End off widget item -->
@@ -660,26 +703,26 @@
 
                             <div class="col-md-3">
                                 <div class="widget_item widget_latest sm-m-top-50">
-                                    <h5 class="text-white">Latest News</h5>
+                                    <!--<h5 class="text-white">Latest News</h5>-->
                                     <div class="widget_latst_item m-top-30">
-                                        <div class="item_icon"><img src="assets/images/ltst-img-1.jpg" alt="" /></div>
+                                        <div class="item_icon"><img src="assets/images/mcu_logo.png" alt="Ming Chang University" /></div>
                                         <div class="widget_latst_item_text">
-                                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                            <a href="">21<sup>th</sup> July 2016</a>
+                                            <p>Ming Chang University</p>
+                                            <a href="https://web.mcu.edu.tw/" target="_blank">more info. >></a>
                                         </div>
                                     </div>
                                     <div class="widget_latst_item m-top-30">
-                                        <div class="item_icon"><img src="assets/images/ltst-img-2.jpg" alt="" /></div>
+                                        <div class="item_icon"><img src="assets/images/fta_school_logo.png" alt="School of Financial Technology" /></div>
                                         <div class="widget_latst_item_text">
-                                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                            <a href="">21<sup>th</sup> July 2016</a>
+                                            <p>School of Financial Technology</p>
+                                            <a href="http://web.fintech.mcu.edu.tw/zh-hant" target="_blank">more info. >></a>
                                         </div>
                                     </div>
                                     <div class="widget_latst_item m-top-30">
-                                        <div class="item_icon"><img src="assets/images/ltst-img-3.jpg" alt="" /></div>
+                                        <div class="item_icon"><img src="assets/images/fta_academy_logo.png" alt="Academy Financial Technology Applications" /></div>
                                         <div class="widget_latst_item_text">
-                                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                            <a href="">21<sup>th</sup> July 2016</a>
+                                            <p>Academy Financial Technology Applications</p>
+                                            <a href="http://fta.mcu.edu.tw/" target="_blank">more info. >></a>
                                         </div>
                                     </div>
                                 </div><!-- End off widget item -->
@@ -687,14 +730,14 @@
 
                             <div class="col-md-3">
                                 <div class="widget_item widget_service sm-m-top-50">
-                                    <h5 class="text-white">Latest News</h5>
+                                    <h5 class="text-white">Our School Feature</h5>
                                     <ul class="m-top-10">
-                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Web Design</a></li>
-                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> User Interface Design</a></li>
-                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> E- Commerce</a></li>
-                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Web Hosting</a></li>
-                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Themes</a></li>
-                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Support Forums</a></li>
+                                        <li class="m-top-20"><a href="https://mcoin.mcu.edu.tw/" target="_blank"><i class="fa fa-angle-right"></i> Mcoin</a></li>
+                                        <li class="m-top-20"><a href="http://120.125.85.104/project/PublicOpinion/" target="_blank"><i class="fa fa-angle-right"></i> Big Data Integration Platform</a></li>
+                                        <li class="m-top-20"><a href="http://120.125.85.104/project/MCU_S412_NLP/login.php" target="_blank"><i class="fa fa-angle-right"></i> Text Mining System</a></li>
+                                        <li class="m-top-20"><a href="http://120.125.73.101/~asisweb/textcloud/nlp.php" target="_blank"><i class="fa fa-angle-right"></i> Cloud Computing Platform</a></li>
+                                        <li class="m-top-20"><a href="http://120.125.73.101/~asisweb/PublicOpinion/" target="_blank"><i class="fa fa-angle-right"></i> Public opinion search platform</a></li>
+                                        <li class="m-top-20"><a href="http://temporarystudio.tw/" target="_blank"><i class="fa fa-angle-right"></i> Temporary Studio</a></li>
                                     </ul>
 
                                 </div><!-- End off widget item -->
@@ -703,25 +746,29 @@
                             <div class="col-md-3">
                                 <div class="widget_item widget_newsletter sm-m-top-50">
                                     <h5 class="text-white">Newsletter</h5>
+                                <script language="javascript">
+    function function_not_enable() {
+        alert("Sorry that this function have not enable.");
+    }
+                                </script>
                                     <form class="form-inline m-top-30">
                                         <div class="form-group">
                                             <input type="email" class="form-control" placeholder="Enter you Email">
-                                            <button type="submit" class="btn text-center"><i class="fa fa-arrow-right"></i></button>
+                                            <button type="submit" class="btn text-center" onclick="function_not_enable()"><i class="fa fa-arrow-right"></i></button>
                                         </div>
 
                                     </form>
                                     <div class="widget_brand m-top-40">
-                                        <a href="" class="text-uppercase">Your Logo</a>
-                                        <p>Lorem ipsum dolor sit amet consec tetur
-                                            adipiscing elit nulla aliquet pretium nisi in</p>
+                                        <a href="" class="text-uppercase">TOWIN</a>
+                                        <p>Create a win-win situation and make the impossible possible</p>
                                     </div>
                                     <ul class="list-inline m-top-30">
-                                        <li>-  <a href=""><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                                        <li>-<a target="_blank" href="https://www.facebook.com/%E9%8A%98%E5%82%B3%E5%A4%A7%E5%AD%B8%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80%E5%AD%B8%E9%99%A2-133325147301159/"><i class="fa fa-facebook"></i></a></li><li>-</li>
+                                        <!--<li><a href=""><i class="fa fa-twitter"></i></a></li>
                                         <li><a href=""><i class="fa fa-linkedin"></i></a></li>
                                         <li><a href=""><i class="fa fa-google-plus"></i></a></li>
                                         <li><a href=""><i class="fa fa-behance"></i></a></li>
-                                        <li><a href=""><i class="fa fa-dribbble"></i></a>  - </li>
+                                        <li><a href=""><i class="fa fa-dribbble"></i></a>-->
                                     </ul>
 
                                 </div><!-- End off widget item -->
