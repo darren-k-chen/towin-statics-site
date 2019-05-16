@@ -3,8 +3,10 @@
     "",
     "\\assets",
     "\\assets\\css",
+    "\\assets\\images",
+    "\\assets\\images\\member_photo",
     "\\assets\\js"
   ],
-  "SelectedNode": "\\index_for_mobile.html",
+  "SelectedNode": "\\assets\\images\\member_photo\\.ryan_photo.jpg",
   "PreviewInSolutionExplorer": false
 }
