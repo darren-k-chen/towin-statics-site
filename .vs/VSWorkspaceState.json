@@ -3,10 +3,11 @@
     "",
     "\\assets",
     "\\assets\\css",
+    "\\assets\\fonts",
     "\\assets\\images",
     "\\assets\\images\\member_photo",
     "\\assets\\js"
   ],
-  "SelectedNode": "\\assets\\images\\member_photo\\.ryan_photo.jpg",
+  "SelectedNode": "\\assets\\css\\style.css",
   "PreviewInSolutionExplorer": false
 }
