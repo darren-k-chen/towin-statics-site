@@ -878,8 +878,8 @@ nav.navbar.bootsnav ul.nav li.active > a{
     color:#00a600;
 }
 
-nav.navbar.bootsnav ul.nav li a:hover{
-    color:#3f92d1;
+nav.navbar.bootsnav ul.nav li a:hover {
+    color: #00a600;
 }
 .navbar-nav > li > a {
     padding-top: 25px;
