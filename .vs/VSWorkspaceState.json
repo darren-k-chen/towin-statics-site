@@ -4,9 +4,8 @@
     "\\assets",
     "\\assets\\css",
     "\\assets\\fonts",
-    "\\assets\\images",
-    "\\assets\\images\\member_photo",
     "\\assets\\js",
+    "\\assets\\js\\vendor",
     "\\assets\\poster"
   ],
   "SelectedNode": "\\assets\\poster\\towin_poster.pdf",
