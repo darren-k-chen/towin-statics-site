@@ -6,8 +6,9 @@
     "\\assets\\fonts",
     "\\assets\\images",
     "\\assets\\images\\member_photo",
-    "\\assets\\js"
+    "\\assets\\js",
+    "\\assets\\poster"
   ],
-  "SelectedNode": "\\assets\\css\\style.css",
+  "SelectedNode": "\\assets\\poster\\towin_poster.pdf",
   "PreviewInSolutionExplorer": false
 }
