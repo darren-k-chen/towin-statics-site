@@ -155,7 +155,12 @@
                                         <i class="icon icon-medical"></i>
                                     </div>
                                     <div class="f_item_text">
-                                        <h3>Inclusive Finance</h3>
+                                        
+                                        <!--<span id="ttt"> </span>-->
+                                        <h3 id="ttt"></h3>
+                                        <script language="javascript">
+                                    document.getElementById("ttt").innerText = 'Inclusive Finance';
+                                        </script>
                                         <p>Increase convenience, regardless of region,
                                              regardless of class, universal benefit to all.</p>
                                     </div>
@@ -211,8 +216,22 @@
                     <div class="row">
                         <div class="main_dialogue text-center">
                             <div class="col-md-12">
-                                <h3><strong>S I M P L Y × S P E E D L Y × S P E C I A L</strong></h3>
+                                <h3 id="slogan"></h3>
                             </div>
+                            <script language="javascript">
+                                    function isMobile() {
+                                        try {
+                                            document.createEvent("TouchEvent");
+                                            return true;
+                                        } catch (e) {
+                                            return false;
+                                        }
+                                    } if (isMobile()) {
+                                        document.getElementById("slogan").innerHTML = '<strong>S I M P L Y <br /> × <br /> S P E E D L Y <br /> × <br /> S P E C I A L</strong>';
+                                    } else {
+                                        document.getElementById("slogan").innerHTML = '<strong>S I M P L Y × S P E E D L Y × S P E C I A L</strong>';
+                                    }
+                            </script>
                         </div>
                     </div>
                 </div>
