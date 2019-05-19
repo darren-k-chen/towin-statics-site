@@ -379,12 +379,11 @@ Button
     border:1px solid;
     padding: 1rem 4rem;
 }
-.btn-primary{
+.btn-primary {
     color: #fff;
-    background-color: #00ce00;
-    border:1px solid;
-    border-color: #00ce00;
-
+    background-color: #1a8601;
+    border: 1px solid;
+    border-color: #1a8601;
 }
     .btn-primary:hover {
         background-color: #eee;
