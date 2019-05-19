@@ -727,7 +727,7 @@ textarea::-ms-input-placeholder{
 
 /*Preloader*/
 #loading {
-    background-color: #00ec00;
+    background-color: #1a8601;
     height: 100%;
     width: 100%;
     position: absolute;
